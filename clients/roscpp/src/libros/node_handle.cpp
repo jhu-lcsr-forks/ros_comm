@@ -540,6 +540,48 @@ void NodeHandle::setParam(const std::string &key, bool b) const
   return param::set(resolveName(key), b);
 }
 
+void NodeHandle::setParam(const std::string &key, std::vector<std::string> vec) const
+{
+  return param::set(resolveName(key), vec);
+}
+void NodeHandle::setParam(const std::string &key, std::vector<double> vec) const
+{
+  return param::set(resolveName(key), vec);
+}
+void NodeHandle::setParam(const std::string &key, std::vector<float> vec) const
+{
+  return param::set(resolveName(key), vec);
+}
+void NodeHandle::setParam(const std::string &key, std::vector<int> vec) const
+{
+  return param::set(resolveName(key), vec);
+}
+void NodeHandle::setParam(const std::string &key, std::vector<bool> vec) const
+{
+  return param::set(resolveName(key), vec);
+}
+
+void NodeHandle::setParam(const std::string &key, std::map<std::string,std::string> map) const
+{
+  return param::set(resolveName(key), map);
+}
+void NodeHandle::setParam(const std::string &key, std::map<std::string,double> map) const
+{
+  return param::set(resolveName(key), map);
+}
+void NodeHandle::setParam(const std::string &key, std::map<std::string,float> map) const
+{
+  return param::set(resolveName(key), map);
+}
+void NodeHandle::setParam(const std::string &key, std::map<std::string,int> map) const
+{
+  return param::set(resolveName(key), map);
+}
+void NodeHandle::setParam(const std::string &key, std::map<std::string,bool> map) const
+{
+  return param::set(resolveName(key), map);
+}
+
 bool NodeHandle::hasParam(const std::string &key) const
 {
   return param::has(resolveName(key));
@@ -575,6 +617,49 @@ bool NodeHandle::getParam(const std::string &key, bool &b) const
   return param::get(resolveName(key), b);
 }
 
+
+bool NodeHandle::getParam(const std::string &key, std::vector<std::string> &vec) const
+{
+  return param::get(resolveName(key), vec);
+}
+bool NodeHandle::getParam(const std::string &key, std::vector<double> &vec) const
+{
+  return param::get(resolveName(key), vec);
+}
+bool NodeHandle::getParam(const std::string &key, std::vector<float> &vec) const
+{
+  return param::get(resolveName(key), vec);
+}
+bool NodeHandle::getParam(const std::string &key, std::vector<int> &vec) const
+{
+  return param::get(resolveName(key), vec);
+}
+bool NodeHandle::getParam(const std::string &key, std::vector<bool> &vec) const
+{
+  return param::get(resolveName(key), vec);
+}
+
+bool NodeHandle::getParam(const std::string &key, std::map<std::string,std::string> &map) const
+{
+  return param::get(resolveName(key), map);
+}
+bool NodeHandle::getParam(const std::string &key, std::map<std::string,double> &map) const
+{
+  return param::get(resolveName(key), map);
+}
+bool NodeHandle::getParam(const std::string &key, std::map<std::string,float> &map) const
+{
+  return param::get(resolveName(key), map);
+}
+bool NodeHandle::getParam(const std::string &key, std::map<std::string,int> &map) const
+{
+  return param::get(resolveName(key), map);
+}
+bool NodeHandle::getParam(const std::string &key, std::map<std::string,bool> &map) const
+{
+  return param::get(resolveName(key), map);
+}
+
 bool NodeHandle::getParamCached(const std::string &key, XmlRpc::XmlRpcValue &v) const
 {
   return param::getCached(resolveName(key), v);
@@ -598,6 +683,48 @@ bool NodeHandle::getParamCached(const std::string &key, int &i) const
 bool NodeHandle::getParamCached(const std::string &key, bool &b) const
 {
   return param::getCached(resolveName(key), b);
+}
+
+bool NodeHandle::getParamCached(const std::string &key, std::vector<std::string> &vec) const
+{
+  return param::getCached(resolveName(key), vec);
+}
+bool NodeHandle::getParamCached(const std::string &key, std::vector<double> &vec) const
+{
+  return param::getCached(resolveName(key), vec);
+}
+bool NodeHandle::getParamCached(const std::string &key, std::vector<float> &vec) const
+{
+  return param::getCached(resolveName(key), vec);
+}
+bool NodeHandle::getParamCached(const std::string &key, std::vector<int> &vec) const
+{
+  return param::getCached(resolveName(key), vec);
+}
+bool NodeHandle::getParamCached(const std::string &key, std::vector<bool> &vec) const
+{
+  return param::getCached(resolveName(key), vec);
+}
+
+bool NodeHandle::getParamCached(const std::string &key, std::map<std::string,std::string> &map) const
+{
+  return param::getCached(resolveName(key), map);
+}
+bool NodeHandle::getParamCached(const std::string &key, std::map<std::string,double> &map) const
+{
+  return param::getCached(resolveName(key), map);
+}
+bool NodeHandle::getParamCached(const std::string &key, std::map<std::string,float> &map) const
+{
+  return param::getCached(resolveName(key), map);
+}
+bool NodeHandle::getParamCached(const std::string &key, std::map<std::string,int> &map) const
+{
+  return param::getCached(resolveName(key), map);
+}
+bool NodeHandle::getParamCached(const std::string &key, std::map<std::string,bool> &map) const
+{
+  return param::getCached(resolveName(key), map);
 }
 
 bool NodeHandle::searchParam(const std::string &key, std::string& result_out) const
