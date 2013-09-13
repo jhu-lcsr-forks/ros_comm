@@ -1405,35 +1405,35 @@ if (handle)
    * \param vec The value to be inserted.
    * \throws InvalidNameException If the parameter key begins with a tilde, or is an otherwise invalid graph resource name
    */
-  void setParam(const std::string& key, std::vector<std::string>& vec) const;
+  void setParam(const std::string& key, const std::vector<std::string>& vec) const;
   /** \brief Set a double vector value on the parameter server.
    *
    * \param key The key to be used in the parameter server's dictionary
    * \param vec The value to be inserted.
    * \throws InvalidNameException If the parameter key begins with a tilde, or is an otherwise invalid graph resource name
    */
-  void setParam(const std::string& key, std::vector<double>& vec) const;
+  void setParam(const std::string& key, const std::vector<double>& vec) const;
   /** \brief Set a float vector value on the parameter server.
    *
    * \param key The key to be used in the parameter server's dictionary
    * \param vec The value to be inserted.
    * \throws InvalidNameException If the parameter key begins with a tilde, or is an otherwise invalid graph resource name
    */
-  void setParam(const std::string& key, std::vector<float>& vec) const;
+  void setParam(const std::string& key, const std::vector<float>& vec) const;
   /** \brief Set a int vector value on the parameter server.
    *
    * \param key The key to be used in the parameter server's dictionary
    * \param vec The value to be inserted.
    * \throws InvalidNameException If the parameter key begins with a tilde, or is an otherwise invalid graph resource name
    */
-  void setParam(const std::string& key, std::vector<int>& vec) const;
+  void setParam(const std::string& key, const std::vector<int>& vec) const;
   /** \brief Set a bool vector value on the parameter server.
    *
    * \param key The key to be used in the parameter server's dictionary
    * \param vec The value to be inserted.
    * \throws InvalidNameException If the parameter key begins with a tilde, or is an otherwise invalid graph resource name
    */
-  void setParam(const std::string& key, std::vector<bool>& vec) const;
+  void setParam(const std::string& key, const std::vector<bool>& vec) const;
 
   /** \brief Set a string vector value on the parameter server.
    *

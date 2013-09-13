@@ -540,23 +540,23 @@ void NodeHandle::setParam(const std::string& key, bool b) const
   return param::set(resolveName(key), b);
 }
 
-void NodeHandle::setParam(const std::string& key, std::vector<std::string>& vec) const
+void NodeHandle::setParam(const std::string& key, const std::vector<std::string>& vec) const
 {
   return param::set(resolveName(key), vec);
 }
-void NodeHandle::setParam(const std::string& key, std::vector<double>& vec) const
+void NodeHandle::setParam(const std::string& key, const std::vector<double>& vec) const
 {
   return param::set(resolveName(key), vec);
 }
-void NodeHandle::setParam(const std::string& key, std::vector<float>& vec) const
+void NodeHandle::setParam(const std::string& key, const std::vector<float>& vec) const
 {
   return param::set(resolveName(key), vec);
 }
-void NodeHandle::setParam(const std::string& key, std::vector<int>& vec) const
+void NodeHandle::setParam(const std::string& key, const std::vector<int>& vec) const
 {
   return param::set(resolveName(key), vec);
 }
-void NodeHandle::setParam(const std::string& key, std::vector<bool>& vec) const
+void NodeHandle::setParam(const std::string& key, const std::vector<bool>& vec) const
 {
   return param::set(resolveName(key), vec);
 }
