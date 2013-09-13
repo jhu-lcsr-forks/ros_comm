@@ -635,7 +635,7 @@ bool getCached(const std::string& key, std::vector<bool> &vec)
 }
 
 template <class T>
-  bool getImpl(const std::string& key, std::map<std::string,T> &map, bool cached)
+  bool getImpl(const std::string& key, std::map<std::string, T> &map, bool cached)
 {
   XmlRpc::XmlRpcValue xml_value;
   if(!getImpl(key, xml_value, cached)) {
@@ -663,44 +663,44 @@ template <class T>
   return true;
 }
 
-bool get(const std::string& key, std::map<std::string,std::string> &map)
+bool get(const std::string& key, std::map<std::string, std::string> &map)
 {
   return getImpl(key, map, false);
 }
-bool get(const std::string& key, std::map<std::string,double> &map)
+bool get(const std::string& key, std::map<std::string, double> &map)
 {
   return getImpl(key, map, false);
 }
-bool get(const std::string& key, std::map<std::string,float> &map)
+bool get(const std::string& key, std::map<std::string, float> &map)
 {
   return getImpl(key, map, false);
 }
-bool get(const std::string& key, std::map<std::string,int> &map)
+bool get(const std::string& key, std::map<std::string, int> &map)
 {
   return getImpl(key, map, false);
 }
-bool get(const std::string& key, std::map<std::string,bool> &map)
+bool get(const std::string& key, std::map<std::string, bool> &map)
 {
   return getImpl(key, map, false);
 }
 
-bool getCached(const std::string& key, std::map<std::string,std::string> &map)
+bool getCached(const std::string& key, std::map<std::string, std::string> &map)
 {
   return getImpl(key, map, true);
 }
-bool getCached(const std::string& key, std::map<std::string,double> &map)
+bool getCached(const std::string& key, std::map<std::string, double> &map)
 {
   return getImpl(key, map, true);
 }
-bool getCached(const std::string& key, std::map<std::string,float> &map)
+bool getCached(const std::string& key, std::map<std::string, float> &map)
 {
   return getImpl(key, map, true);
 }
-bool getCached(const std::string& key, std::map<std::string,int> &map)
+bool getCached(const std::string& key, std::map<std::string, int> &map)
 {
   return getImpl(key, map, true);
 }
-bool getCached(const std::string& key, std::map<std::string,bool> &map)
+bool getCached(const std::string& key, std::map<std::string, bool> &map)
 {
   return getImpl(key, map, true);
 }
