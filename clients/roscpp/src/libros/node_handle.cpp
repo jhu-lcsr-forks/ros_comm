@@ -561,23 +561,23 @@ void NodeHandle::setParam(const std::string& key, const std::vector<bool>& vec) 
   return param::set(resolveName(key), vec);
 }
 
-void NodeHandle::setParam(const std::string& key, std::map<std::string, std::string>& map) const
+void NodeHandle::setParam(const std::string& key, const std::map<std::string, std::string>& map) const
 {
   return param::set(resolveName(key), map);
 }
-void NodeHandle::setParam(const std::string& key, std::map<std::string, double>& map) const
+void NodeHandle::setParam(const std::string& key, const std::map<std::string, double>& map) const
 {
   return param::set(resolveName(key), map);
 }
-void NodeHandle::setParam(const std::string& key, std::map<std::string, float>& map) const
+void NodeHandle::setParam(const std::string& key, const std::map<std::string, float>& map) const
 {
   return param::set(resolveName(key), map);
 }
-void NodeHandle::setParam(const std::string& key, std::map<std::string, int>& map) const
+void NodeHandle::setParam(const std::string& key, const std::map<std::string, int>& map) const
 {
   return param::set(resolveName(key), map);
 }
-void NodeHandle::setParam(const std::string& key, std::map<std::string, bool>& map) const
+void NodeHandle::setParam(const std::string& key, const std::map<std::string, bool>& map) const
 {
   return param::set(resolveName(key), map);
 }
@@ -618,44 +618,44 @@ bool NodeHandle::getParam(const std::string& key, bool& b) const
 }
 
 
-bool NodeHandle::getParam(const std::string& key, std::vector<std::string> &vec) const
+bool NodeHandle::getParam(const std::string& key, std::vector<std::string>& vec) const
 {
   return param::get(resolveName(key), vec);
 }
-bool NodeHandle::getParam(const std::string& key, std::vector<double> &vec) const
+bool NodeHandle::getParam(const std::string& key, std::vector<double>& vec) const
 {
   return param::get(resolveName(key), vec);
 }
-bool NodeHandle::getParam(const std::string& key, std::vector<float> &vec) const
+bool NodeHandle::getParam(const std::string& key, std::vector<float>& vec) const
 {
   return param::get(resolveName(key), vec);
 }
-bool NodeHandle::getParam(const std::string& key, std::vector<int> &vec) const
+bool NodeHandle::getParam(const std::string& key, std::vector<int>& vec) const
 {
   return param::get(resolveName(key), vec);
 }
-bool NodeHandle::getParam(const std::string& key, std::vector<bool> &vec) const
+bool NodeHandle::getParam(const std::string& key, std::vector<bool>& vec) const
 {
   return param::get(resolveName(key), vec);
 }
 
-bool NodeHandle::getParam(const std::string& key, std::map<std::string, std::string> &map) const
+bool NodeHandle::getParam(const std::string& key, std::map<std::string, std::string>& map) const
 {
   return param::get(resolveName(key), map);
 }
-bool NodeHandle::getParam(const std::string& key, std::map<std::string, double> &map) const
+bool NodeHandle::getParam(const std::string& key, std::map<std::string, double>& map) const
 {
   return param::get(resolveName(key), map);
 }
-bool NodeHandle::getParam(const std::string& key, std::map<std::string, float> &map) const
+bool NodeHandle::getParam(const std::string& key, std::map<std::string, float>& map) const
 {
   return param::get(resolveName(key), map);
 }
-bool NodeHandle::getParam(const std::string& key, std::map<std::string, int> &map) const
+bool NodeHandle::getParam(const std::string& key, std::map<std::string, int>& map) const
 {
   return param::get(resolveName(key), map);
 }
-bool NodeHandle::getParam(const std::string& key, std::map<std::string, bool> &map) const
+bool NodeHandle::getParam(const std::string& key, std::map<std::string, bool>& map) const
 {
   return param::get(resolveName(key), map);
 }
@@ -685,44 +685,44 @@ bool NodeHandle::getParamCached(const std::string& key, bool& b) const
   return param::getCached(resolveName(key), b);
 }
 
-bool NodeHandle::getParamCached(const std::string& key, std::vector<std::string> &vec) const
+bool NodeHandle::getParamCached(const std::string& key, std::vector<std::string>& vec) const
 {
   return param::getCached(resolveName(key), vec);
 }
-bool NodeHandle::getParamCached(const std::string& key, std::vector<double> &vec) const
+bool NodeHandle::getParamCached(const std::string& key, std::vector<double>& vec) const
 {
   return param::getCached(resolveName(key), vec);
 }
-bool NodeHandle::getParamCached(const std::string& key, std::vector<float> &vec) const
+bool NodeHandle::getParamCached(const std::string& key, std::vector<float>& vec) const
 {
   return param::getCached(resolveName(key), vec);
 }
-bool NodeHandle::getParamCached(const std::string& key, std::vector<int> &vec) const
+bool NodeHandle::getParamCached(const std::string& key, std::vector<int>& vec) const
 {
   return param::getCached(resolveName(key), vec);
 }
-bool NodeHandle::getParamCached(const std::string& key, std::vector<bool> &vec) const
+bool NodeHandle::getParamCached(const std::string& key, std::vector<bool>& vec) const
 {
   return param::getCached(resolveName(key), vec);
 }
 
-bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, std::string> &map) const
+bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, std::string>& map) const
 {
   return param::getCached(resolveName(key), map);
 }
-bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, double> &map) const
+bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, double>& map) const
 {
   return param::getCached(resolveName(key), map);
 }
-bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, float> &map) const
+bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, float>& map) const
 {
   return param::getCached(resolveName(key), map);
 }
-bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, int> &map) const
+bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, int>& map) const
 {
   return param::getCached(resolveName(key), map);
 }
-bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, bool> &map) const
+bool NodeHandle::getParamCached(const std::string& key, std::map<std::string, bool>& map) const
 {
   return param::getCached(resolveName(key), map);
 }
