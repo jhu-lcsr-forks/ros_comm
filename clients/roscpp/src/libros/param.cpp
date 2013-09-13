@@ -50,7 +50,7 @@ M_Param g_params;
 boost::mutex g_params_mutex;
 S_string g_subscribed_params;
 
-void set(const std::string &key, const XmlRpc::XmlRpcValue &v)
+void set(const std::string& key, const XmlRpc::XmlRpcValue& v)
 {
   std::string mapped_key = ros::names::resolve(key);
 
@@ -76,7 +76,7 @@ void set(const std::string &key, const XmlRpc::XmlRpcValue &v)
   }
 }
 
-void set(const std::string &key, const std::string &s)
+void set(const std::string& key, const std::string& s)
 {
   // construct xmlrpc_c::value object of the std::string and
   // call param::set(key, xmlvalue);
@@ -84,7 +84,7 @@ void set(const std::string &key, const std::string &s)
   ros::param::set(key, v);
 }
 
-void set(const std::string &key, const char* s)
+void set(const std::string& key, const char* s)
 {
   // construct xmlrpc_c::value object of the std::string and
   // call param::set(key, xmlvalue);
@@ -93,13 +93,13 @@ void set(const std::string &key, const char* s)
   ros::param::set(key, v);
 }
 
-void set(const std::string &key, double d)
+void set(const std::string& key, double d)
 {
   XmlRpc::XmlRpcValue v(d);
   ros::param::set(key, v);
 }
 
-void set(const std::string &key, int i)
+void set(const std::string& key, int i)
 {
   XmlRpc::XmlRpcValue v(i);
   ros::param::set(key, v);
@@ -158,7 +158,7 @@ template <class T>
   // Note: the XmlRpcValue starts off as "invalid" and assertArray turns it
   // into an array type with the given size
   XmlRpc::XmlRpcValue xml_value;
-  const XmlRpc::XmlRpcValue::ValueStruct &xml_map = (const XmlRpc::XmlRpcValue::ValueStruct &)(xml_value);
+  const XmlRpc::XmlRpcValue::ValueStruct& xml_map = (const XmlRpc::XmlRpcValue::ValueStruct &)(xml_value);
 
   // Copy the contents into the XmlRpcValue
   for(typename std::map<std::string, T>::const_iterator it = map.begin(); it != map.end(); ++it) {
@@ -193,7 +193,7 @@ void set(const std::string& key, const std::map<std::string, bool> &map)
   setImpl(key, map);
 }
 
-bool has(const std::string &key)
+bool has(const std::string& key)
 {
   XmlRpc::XmlRpcValue params, result, payload;
   params[0] = this_node::getName();
@@ -210,7 +210,7 @@ bool has(const std::string &key)
   return payload;
 }
 
-bool del(const std::string &key)
+bool del(const std::string& key)
 {
   std::string mapped_key = ros::names::resolve(key);
 
@@ -244,7 +244,7 @@ bool del(const std::string &key)
   return true;
 }
 
-bool getImpl(const std::string &key, XmlRpc::XmlRpcValue &v, bool use_cache)
+bool getImpl(const std::string& key, XmlRpc::XmlRpcValue& v, bool use_cache)
 {
   std::string mapped_key = ros::names::resolve(key);
 
@@ -315,7 +315,7 @@ bool getImpl(const std::string &key, XmlRpc::XmlRpcValue &v, bool use_cache)
   return ret;
 }
 
-bool getImpl(const std::string &key, std::string &s, bool use_cache)
+bool getImpl(const std::string& key, std::string& s, bool use_cache)
 {
   XmlRpc::XmlRpcValue v;
   if (!getImpl(key, v, use_cache))
@@ -326,7 +326,7 @@ bool getImpl(const std::string &key, std::string &s, bool use_cache)
   return true;
 }
 
-bool getImpl(const std::string &key, double &d, bool use_cache)
+bool getImpl(const std::string& key, double& d, bool use_cache)
 {
   XmlRpc::XmlRpcValue v;
   if (!getImpl(key, v, use_cache))
@@ -350,7 +350,7 @@ bool getImpl(const std::string &key, double &d, bool use_cache)
   return true;
 }
 
-bool getImpl(const std::string &key, float &f, bool use_cache)
+bool getImpl(const std::string& key, float& f, bool use_cache)
 {
   double d = static_cast<double>(f);
   bool result = getImpl(key, d, use_cache);
@@ -359,7 +359,7 @@ bool getImpl(const std::string &key, float &f, bool use_cache)
   return result;
 }
 
-bool getImpl(const std::string &key, int &i, bool use_cache)
+bool getImpl(const std::string& key, int& i, bool use_cache)
 {
   XmlRpc::XmlRpcValue v;
   if (!getImpl(key, v, use_cache))
@@ -394,7 +394,7 @@ bool getImpl(const std::string &key, int &i, bool use_cache)
   return true;
 }
 
-bool getImpl(const std::string &key, bool &b, bool use_cache)
+bool getImpl(const std::string& key, bool& b, bool use_cache)
 {
   XmlRpc::XmlRpcValue v;
   if (!getImpl(key, v, use_cache))
